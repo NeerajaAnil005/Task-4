@@ -1,0 +1,10 @@
+SELECT * FROM employee_db.employees;
+SELECT COUNT(*) AS total_employees FROM employees;
+SELECT SUM(salary) AS total_salary FROM employees;
+SELECT AVG(salary) AS average_salary FROM employees;
+ SELECT dept, SUM(salary) AS total_salary FROM employees GROUP BY dept;
+ SELECT dept, COUNT(*) AS EMP_COUNT FROM employees GROUP BY dept;
+ SELECT dept, AVG(SALARY) AS AVG_SALARY FROM employees GROUP BY dept;
+  SELECT dept, SUM(salary) AS total_salary FROM employees GROUP BY dept;
+  SELECT dept, SUM(salary) AS total_salary FROM employees GROUP BY dept HAVING SUM(SALARY)>90000;
+ SELECT dept, COUNT(*) AS EMP_COUNT FROM employees GROUP BY dept HAVING COUNT(*)>1;
